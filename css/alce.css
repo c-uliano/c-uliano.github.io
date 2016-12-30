@@ -1,1 +1,447 @@
-css will go here
+/*GENERAL*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    color: #414042;
+    display: flex; /*for a sticky footer*/
+    flex-direction: column; /*for a sticky footer*/
+    min-height: 100vh; /*for a sticky footer*/
+}
+
+.container {
+    max-width: 940px;
+    margin: auto;
+    padding: 0 5%;
+    flex: 1;
+}
+/*can I just add the flex: 1 into the main container instead of having a separate class?*/
+
+.flex-container {
+    /*flex: 1;*/
+}
+
+img {
+    max-width: 100%;
+}
+
+footer {
+    text-align: center;
+    font-size: .8em;
+    background-color: #f1f1f2;
+    padding: 1em;
+    margin-top: 1em;
+}
+
+/*TYPOGRAPHY*/
+h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+    color: black;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+.h1 {
+    text-align: left;
+    color: black;
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+}
+
+h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0;
+}
+
+h6 {
+    font-size: 0.67em;
+    margin: 2.33em 0;
+}
+
+small {
+    font-size: 60%; /*does this percentage need changing for flexbox?*/
+    font-weight: lighter;
+}
+
+p {
+    text-align: left;
+    margin: 0 0 1em 0;
+    line-height: 1.5;
+}
+
+ul, ol {
+    text-align: left;
+    line-height: 1.8;
+    margin: 0 0 1em 1.5em;
+}
+
+ul {
+    list-style: circle;
+}
+
+dl {
+    text-align: left;
+    line-height: 1.8;
+    margin: 0 0 1em 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd:before {
+    content: "- ";
+}
+
+blockquote {
+    text-align: left;
+    margin: 1em 40px;
+    border-left: 5px solid #043852;
+}
+
+blockquote p {
+    margin-left: 1em;
+}
+
+code {
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #ededf5;
+}
+
+/*BUTTONS*/
+.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 10px 0;
+  color: #414042;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: .1rem; /*I don't use rem anywhere else, change*/
+  text-transform: uppercase;
+  background-color: transparent;
+  /*border-radius: 5px;*/
+  border: 2px solid #414042;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+    color: #319ea3;
+    border-color: #319ea3;
+}
+
+.button:active, button:active, input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active {
+    color: white;
+    background-color: #319ea3;
+    border-color: #319ea3;
+    transition: none;
+}
+
+/*LINKS*/
+a {
+    text-decoration: none;
+    color: #319ea3;
+}
+
+a:hover, a:active {
+    color: #043852;
+}
+
+/*IMAGE HOVER EFFECT*/
+.name,
+.title {
+  display: none;
+}
+
+/*UTILITIES*/
+.float-rt {
+    float: right;
+}
+
+.float-lt {
+    float: left;
+}
+
+.align-rt {
+    align-self: flex-end;
+}
+
+.align-lt {
+    align-self: flex-start;
+}
+
+.clear {
+ clear: both;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.margins-0 {
+    margin: 0;
+}
+
+/*FORMS*/
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: left;
+}
+
+label {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+input, textarea, select {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 0 20px 0;
+    border: 2px solid #043852;
+    background: #e6e7e8;
+    padding: 8px;
+}
+
+input:focus, textarea:focus {
+    background: white;
+}
+
+#name, #email, #phone, #address, #zip, #state {
+    height: 1.5em;
+}
+
+#message {
+    height: 5em;
+}
+
+input[type="submit"], input[type="reset"] {
+    align-self: center;
+}
+
+/*CAPTIONS*/
+.captions p {
+  position: relative;
+  z-index: 2;
+  bottom: 40px;
+  font-weight: bold;
+  font-size: .8em;
+  text-align: center;
+}
+
+.captions img {
+    background-color: lightgray;
+    padding-bottom: 55px;
+}
+
+/*GRID*/
+.row {
+    display: block;
+    margin: auto;
+    list-style: none;
+    text-align: center;
+}
+
+/*BOXED COLUMNS*/
+.box {
+    background-color: lightgray;
+    padding: 1em;
+    box-sizing: border-box;
+    margin: 1em 0;
+}
+
+
+/**********************************
+600PX MEDIA QUERY
+***********************************/
+@media screen and (min-width: 600px) {
+
+    /*UTILITIES*/
+    .margins-1 {
+        margin-left: 1%;
+        margin-right: 1%
+    }
+
+    /*FORMS*/
+    form {
+        margin: 0 25%;
+    }
+
+    /*IMAGE HOVER EFFECT*/
+    .name,
+    .title {
+        display: block;
+    }
+
+    .hover {
+        position: relative;
+    }
+
+    .hover a img, .hover a img {
+        transition-duration: 0.8s;
+    }
+
+    .hover a:hover img, .hover a:hover img {
+        filter: brightness(20%);
+    }
+
+    /*IMAGE HOVER EFFECT WITH CAPTIONS OVERLAY*/
+    div a .name, li a .name {
+        text-transform: uppercase;
+        text-shadow: rgba(0, 0, 0, 0.7) 1px 1px 5px;
+        color: white;
+        font-weight: lighter;
+        font-size: 20px;
+        letter-spacing: .1em;
+        position: absolute;
+        top: 45%;
+        left: 0;
+        text-align: center;
+        opacity: 0;
+        z-index: 2;
+        width: 100%;
+    }
+
+    li a .name {
+        top: 40%;
+    }
+
+    div a .name .title, li a .name .title {
+      display: block;
+      text-transform: none;
+      font-style: italic;
+      font-size: 80%;
+      color: white;
+      opacity: 0;
+      transition-property: all;
+      transition-delay: 0.2s;
+      transition-duration: 0.9s;
+    }
+
+    div a:hover .name, li a:hover .name {
+      opacity: 1;
+      transform: scale(1, 1);
+      transition-property: all;
+      transition-duration: 0.6s;
+    }
+
+    div a:hover .title, li a:hover .title {
+      opacity: 1;
+    }
+
+    /*GRID*/
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /*automatic 2 column design for inbetween screen sizes*/
+    .six-columns, .four-columns, .three-columns, .two-columns, .two-columns-90, .two-columns-80, .two-columns-70, .two-columns-60, .two-columns-40, .two-columns-30, .two-columns-20, .two-columns-10, .three-columns-60, .three-columns-50, .three-columns-40, .three-columns-30, .three-columns-25, .three-columns-20 {
+        margin: 0 1% 10px 1%;
+        flex-basis: 48%;
+    }
+
+     .one-column {
+        margin: 0 1% 10px 1%;
+    }
+}
+
+/**********************************
+950PX MEDIA QUERY
+***********************************/
+@media screen and (min-width: 950px){
+
+    /*GRID*/
+    .one-column {
+        flex-basis: 98%;
+    }
+    .two-columns {
+        flex-basis: 48%;
+    }
+    .two-columns-90 {
+        flex-basis: 86.4%;
+    }
+    .two-columns-80 {
+        flex-basis: 76.8%;
+    }
+    .two-columns-70 {
+        flex-basis: 67.2%;
+    }
+    .two-columns-60 {
+        flex-basis: 57.6%;
+    }
+    .two-columns-40 {
+        flex-basis: 38.4%;
+    }
+    .two-columns-30 {
+        flex-basis: 28.8%;
+    }
+    .two-columns-20 {
+        flex-basis: 19.2%;
+    }
+    .two-columns-10 {
+        flex-basis: 9.6%;
+    }
+    .three-columns {
+        flex-basis: 31.3333%;
+    }
+    .three-columns-60 {
+        flex-basis: 56.4%;
+    }
+    .three-columns-50 {
+        flex-basis: 47%;
+    }
+    .three-columns-40 {
+        flex-basis: 37.6%;
+    }
+    .three-columns-30 {
+        flex-basis: 28.2%;
+    }
+    .three-columns-25 {
+        flex-basis: 23.5%;
+    }
+    .three-columns-20 {
+        flex-basis: 18.8%;
+    }
+    .four-columns {
+        flex-basis: 23%;
+    }
+    .six-columns {
+        flex-basis: 14.6667%;
+    }
+    .flex-in-flex {
+        display: flex;
+        align-items: flex-start;
+    }
+    .flex-in-flex img {
+        max-width: 50%;
+        padding-right: 2%;
+        padding-left: 2%;
+        box-sizing: border-box;
+    }
+}
