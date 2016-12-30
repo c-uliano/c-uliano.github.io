@@ -19,11 +19,6 @@ body {
     padding: 0 5%;
     flex: 1;
 }
-/*can I just add the flex: 1 into the main container instead of having a separate class?*/
-
-.flex-container {
-    /*flex: 1;*/
-}
 
 img {
     max-width: 100%;
@@ -81,7 +76,7 @@ h6 {
 }
 
 small {
-    font-size: 60%; /*does this percentage need changing for flexbox?*/
+    font-size: 60%; 
     font-weight: lighter;
 }
 
