@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+html {
+    font-size: 100%;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: normal;
@@ -76,7 +80,7 @@ h6 {
 }
 
 small {
-    font-size: 60%; 
+    font-size: 70%;
     font-weight: lighter;
 }
 
@@ -136,10 +140,9 @@ code {
   font-size: 12px;
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
-  letter-spacing: .1rem; /*I don't use rem anywhere else, change*/
+  letter-spacing: .1em;
   text-transform: uppercase;
   background-color: transparent;
-  /*border-radius: 5px;*/
   border: 2px solid #414042;
   cursor: pointer;
   box-sizing: border-box;
@@ -220,15 +223,12 @@ input, textarea, select {
     margin: 0 0 20px 0;
     border: 2px solid #043852;
     background: #e6e7e8;
-    padding: 8px;
+    padding: 6px;
+    font-size: 100%;
 }
 
 input:focus, textarea:focus {
     background: white;
-}
-
-#name, #email, #phone, #address, #zip, #state {
-    height: 1.5em;
 }
 
 #message {
@@ -297,11 +297,11 @@ input[type="submit"], input[type="reset"] {
         position: relative;
     }
 
-    .hover a img, .hover a img {
+    .hover a img {
         transition-duration: 0.8s;
     }
 
-    .hover a:hover img, .hover a:hover img {
+    .hover a:hover img {
         filter: brightness(20%);
     }
 
@@ -320,6 +320,8 @@ input[type="submit"], input[type="reset"] {
         opacity: 0;
         z-index: 2;
         width: 100%;
+        transition-property: all;
+        transition-duration: 0.8s;
     }
 
     li a .name {
@@ -334,18 +336,10 @@ input[type="submit"], input[type="reset"] {
       color: white;
       opacity: 0;
       transition-property: all;
-      transition-delay: 0.2s;
-      transition-duration: 0.9s;
+      transition-duration: 0.8s;
     }
 
-    div a:hover .name, li a:hover .name {
-      opacity: 1;
-      transform: scale(1, 1);
-      transition-property: all;
-      transition-duration: 0.6s;
-    }
-
-    div a:hover .title, li a:hover .title {
+    div a:hover .name, li a:hover .name, div a:hover .title, li a:hover .title {
       opacity: 1;
     }
 
@@ -429,6 +423,8 @@ input[type="submit"], input[type="reset"] {
     .six-columns {
         flex-basis: 14.6667%;
     }
+
+    /*IMAGES NEXT TO CONTENT IN COLUMN*/
     .flex-in-flex {
         display: flex;
         align-items: flex-start;
