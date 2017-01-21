@@ -1,1 +1,1 @@
-<p>This is my portfolio site, it just isn't built yet. Currently the page <a href="https://c-uliano.github.io">c-uliano.github.io</a> shows my Alce framework, but I have moved that over to it's own project page <a href="https://c-uliano.github.io/alce">c-uliano.github.io/alce</a></p>
+<p>This is just a little intro site leading visitors to my personal website (which isn't up yet) or to my Alce project on GitHub (which is up but not entirely complete).</p>
