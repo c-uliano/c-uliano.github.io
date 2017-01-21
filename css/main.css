@@ -277,4 +277,8 @@ body {
     h1 img {
         max-height: 50px;
     }
+    
+    h1 .logo {
+        max-height: 100px;
+    }
 }
