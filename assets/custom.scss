@@ -1,0 +1,23 @@
+$primary: #720E32;
+$secondary: #043852;
+$dark: #4A5B73;
+
+$navbar-light-hover-color: rgba($primary, 1);
+
+$small-font-size: .55em;
+
+$border-radius: 0rem;
+
+$border-width: 2px;
+
+// need this here or you get an error saying $gray-200 is undefined. It's !default in _variables.scss so if it's above the import it has no value, need to set it. 
+// or move the $light below the import, so $gray-200 now has a value. Although I don't think that was actually working so well, needs more testing
+$light: #e9ecef;
+
+h2 {
+    color: $primary;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// $light: $gray-200;
