@@ -1,0 +1,85 @@
+/* ADJUSTING BOOTSTRAP */
+/* h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+} */
+
+.small {
+    letter-spacing: 2px;
+}
+
+.container-custom {
+    max-width: 960px;
+}
+
+/* https://getbootstrap.com/docs/5.2/customize/css-variables/ */
+p {
+    --bs-body-line-height: 2;
+    line-height: var(--bs-body-line-height);
+}
+
+.lead {
+    --bs-body-line-height: 1.5;
+    line-height: var(--bs-body-line-height);
+}
+
+.card,
+.portfolio a .card {
+    transition: .25s ease;
+}
+
+/* where did I get this variable, BS documentation? */
+.card:hover,
+.portfolio a:hover .card  {
+    box-shadow: 5px 5px 0px var(--bs-gray-500);
+}
+
+.card p {
+    --bs-body-line-height: 1.5;
+    line-height: var(--bs-body-line-height);
+}
+
+.card-body i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio .card-body i {
+    margin-bottom: 0;
+    font-size: 1.8rem;
+}
+
+footer .nav-link {
+    padding: .5rem;
+    font-size: 1.5rem;
+}
+
+/* CUSTOM */
+.navbar .bi {
+    font-size: 1.65rem;
+    vertical-align: -3px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+@media (min-width: 992px) {
+    .border-lg-0 {
+        border: 0 !important;
+    }
+}
+
+.decorative_line::after {
+    content: "";
+    height: 3px;
+    width: 100px;
+    margin-left: 4px;
+    vertical-align: middle;
+    display: inline-block;
+    background-color: var(--bs-gray-500);
+}
+
+h5.decorative_line::after {
+    width: 50px;
+    height: 2px;
+}
