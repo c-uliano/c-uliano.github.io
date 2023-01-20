@@ -3,6 +3,12 @@
     text-transform: uppercase;
 } */
 
+:root {
+    --bs-primary: #720E32;
+    --bs-secondary-bg: #043852;
+    --bs-dark: #4A5B73;
+}
+
 .small {
     letter-spacing: 2px;
 }
