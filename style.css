@@ -11,6 +11,12 @@
 
 .btn-primary {
     background-color: #720E32;
+    border-color: #720E32 !important;
+}
+
+.btn-primary:hover {
+    background-color: #4e0a22;
+    border-color: #4e0a22 !important;
 }
 
 .text-primary {
@@ -21,9 +27,9 @@
     border-color: #720E32 !important;
 }
 
-/* .card-body {
+.portfolio .card-body {
     --bs-card-color: #720E32 !important;
-} */
+}
 
 /*  */
 .small {
