@@ -3,12 +3,29 @@
     text-transform: uppercase;
 } */
 
-:root {
-    --bs-primary: #720E32;
+/* :root {
+    --bs-primary: #720E32 !important;
     --bs-secondary-bg: #043852;
     --bs-dark: #4A5B73;
+} */
+
+.btn-primary {
+    background-color: #720E32;
 }
 
+.text-primary {
+    color: #720E32 !important;
+}
+
+.border-primary {
+    border-color: #720E32 !important;
+}
+
+/* .card-body {
+    --bs-card-color: #720E32 !important;
+} */
+
+/*  */
 .small {
     letter-spacing: 2px;
 }
