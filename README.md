@@ -1,1 +1,2 @@
-<p>This is just a little intro site leading visitors to my personal website (which isn't up yet) or to my Alce project on GitHub (which is up but not entirely complete).</p>
+# Welcome All
+Thanks for visiting my personal website. It's always changing, new projects being worked on and added.
